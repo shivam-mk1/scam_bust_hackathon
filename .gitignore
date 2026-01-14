@@ -1,0 +1,23 @@
+# Python virtual environments
+scam/
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Flutter (if present)
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+
+# VS Code
+.vscode/
