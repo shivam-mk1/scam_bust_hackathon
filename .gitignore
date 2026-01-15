@@ -14,10 +14,19 @@ Thumbs.db
 # Logs
 *.log
 
-# Flutter (if present)
-.flutter-plugins
-.flutter-plugins-dependencies
-build/
+# Model files (too large for git)
+model/
+*.pt
+*.pth
+*.bin
 
+# Training outputs
+training/processed_data.csv
+
+# Flutter (if present)
+FIXES_APPLIED.md
+build/
+backend/__pycache__
 # VS Code
+backend/venv
 .vscode/
