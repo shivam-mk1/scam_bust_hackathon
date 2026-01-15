@@ -171,6 +171,39 @@ git push
 - No environment variables required for basic setup
 - For production, consider adding API keys for authentication
 
+## 🎯 Deployment to Render
+
+For detailed Render deployment instructions, see **[RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md)**
+
+### Quick Start:
+
+1. **Train the model locally first** (Render free tier has limited resources):
+   ```bash
+   cd training
+   python preprocess.py
+   python train.py
+   ```
+
+2. **Commit the trained model**:
+   ```bash
+   git add -f model/scam_model/
+   git commit -m "Add trained model"
+   git push
+   ```
+
+3. **Deploy to Render**:
+   - Go to [dashboard.render.com](https://dashboard.render.com)
+   - Click **New +** → **Web Service**
+   - Connect your GitHub repository
+   - Render will auto-detect `render.yaml` and deploy
+
+4. **Test your deployment**:
+   ```bash
+   curl https://your-app.onrender.com/health
+   ```
+
+**Important:** See [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md) for complete instructions, troubleshooting, and handling large model files.
+
 ## 📊 Model Performance
 
 The model is evaluated on a validation set during training:

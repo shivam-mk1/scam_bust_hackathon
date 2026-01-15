@@ -2,8 +2,10 @@
 scam/
 venv/
 .env/
-
+check_deployment.sh
+RENDER_DEPLOYMENT.md
 # Python cache
+runtime.txt
 __pycache__/
 *.pyc
 
