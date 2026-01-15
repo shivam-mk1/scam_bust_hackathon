@@ -8,10 +8,15 @@ app = FastAPI()
 
 # Absolute-safe path resolution (works locally + Railway)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "..", "model", "scam_model")
+MODEL_REPO = "nishb2715/scam-detection-model"
 
-tokenizer = DistilBertTokenizer.from_pretrained(MODEL_PATH)
-model = DistilBertForSequenceClassification.from_pretrained(MODEL_PATH)
+tokenizer = DistilBertTokenizer.from_pretrained(MODEL_REPO)
+model = DistilBertForSequenceClassification.from_pretrained(
+    MODEL_REPO,
+    use_safetensors=True
+)
+model.eval()
+
 model.eval()
 
 class PredictRequest(BaseModel):
