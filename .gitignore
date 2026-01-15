@@ -2,12 +2,12 @@
 scam/
 venv/
 .env/
-check_deployment.sh
-RENDER_DEPLOYMENT.md
+backend/venv/
+
 # Python cache
-runtime.txt
 __pycache__/
 *.pyc
+backend/__pycache__/
 
 # OS files
 .DS_Store
@@ -16,19 +16,14 @@ Thumbs.db
 # Logs
 *.log
 
-# Model files (too large for git)
+# Model files (too large for git - will be trained on deployment)
 model/
 *.pt
 *.pth
 *.bin
 
-# Training outputs
+# Training outputs (generated during preprocessing)
 training/processed_data.csv
 
-# Flutter (if present)
-FIXES_APPLIED.md
-build/
-backend/__pycache__
 # VS Code
-backend/venv
 .vscode/
